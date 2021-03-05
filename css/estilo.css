@@ -211,6 +211,8 @@ header a {
   
 }
 
+
+
 .box-3-line2{
     width: 30.0%;
     display: inline-block;
@@ -224,15 +226,8 @@ header a {
   
 }
 
-.box-3 + div:hover{
-    color: #FFF;
-    background-color: #142E2D;
-}
 
-.box-3-line2 + div:hover{
-    color: #FFF;
-    background-color: #142E2D;
-}
+
 
 .secao5h6{
     color: rgb(74, 149, 11);
@@ -245,7 +240,7 @@ header a {
 .secao5-icone{
     padding: 10px 12px;
     font-size: 2.0em;
-    color: black;
+    color: #000;
     text-align: left;
 }
 
@@ -303,9 +298,37 @@ header a {
     margin-left: 40%;
     margin-top: 15px;
     margin-bottom: 60px;
-    
+
+
     
 
+}
+
+.box a{
+    display: inline-block;
+    padding: 8px 18px 10px;
+    text-transform: uppercase;
+    border: 1px solid;
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFF;
+    background-color: rgb(74, 149, 11);
+    border-color: rgb(74, 149, 11);
+    margin-left: 18%;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+
+.box a:hover{
+    color: #000;
+    border: 1px solid #000;
+    background-color: rgba(74, 149, 11, 0);
+}
+
+.box-2 a:hover{
+    color: #000;
+    border: 1px solid #000;
+    background-color: rgba(74, 149, 11, 0);
 }
 
 .box-1 h5{
