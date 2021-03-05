@@ -171,6 +171,12 @@ header a {
     float: right;
     padding-right:150px;
 }
+
+.secao5-titulo{
+    vertical-align: inherit;
+}
+
+
 /* end of classes */
 
 footer section {
