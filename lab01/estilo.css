@@ -1,0 +1,252 @@
+
+html {
+    background-color: rgb(4, 21, 29);
+    font: Arial, sans-serif;
+}
+.wrapper {
+    background-color: white;
+    width:1000px;
+    
+    margin:auto;
+    padding: 15px;
+    
+    
+}
+
+header{
+    margin: 0;
+    padding: 0;
+}
+.row {
+    margin: 0;
+}
+
+.row::after{
+    content:'';
+    display: block;
+    height: 0;
+    clear: both;
+    font-size: 0;
+    visibility: hidden;
+}
+
+section{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#logo-topo{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 2em;
+}
+
+#logo{
+    text-align: left;
+    color: white;
+    display: inline;
+    padding: 0;
+    margin: 0;
+
+}
+
+#logo2{
+    text-align: left;
+
+
+    color: rgb(13, 104, 172);
+
+    display: inline;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+body,head {
+    margin:0;
+    padding: 0;
+}
+
+#div-header{
+    width:1000px;
+    margin:auto;
+    padding: 15px;
+ 
+}
+
+footer h4{
+    margin: 0%;
+}
+
+.banner{
+   
+    background: url(../lab01/img/surf.png) no-repeat top;
+    background-size:cover;
+    height: 500px;
+    padding:0;
+    
+    
+}
+
+#div-banner{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    position: relative;
+    
+
+    margin: 0px;
+
+    padding-top: 5%;
+    padding-left: 20px;
+    font-size: 3em;
+
+    
+    
+}
+
+#div-banner h3{
+    margin-left: 2%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#div-banner p{
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-right:0 ;
+    margin-bottom: 0;
+    font-size: 0.3em;
+    
+    padding:0;
+}
+#img-surf{
+    background-size: 100%;
+}
+
+
+header nav {
+
+
+ 
+    
+}
+
+header ul {
+    list-style:none;
+    margin:0px 0 0 0;
+    
+    
+
+}
+header li {
+    float:left;
+    margin-left: 15px;
+
+   
+
+}
+
+header a {
+    color:#fff;
+
+    text-decoration: none;
+    font-size: 0.5em;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif ;
+    
+}
+
+header a:hover{
+    color: rgb(13, 104, 172);
+}
+
+
+.box {
+    box-sizing:border-box;
+    float:left;
+    width:30%;
+   
+    color: white;
+    box-sizing:border-box;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 0;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    background-color: rgb(13, 104, 172);
+    
+}
+
+.box a{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(38, 204, 226);
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 0;
+    padding: 5px;
+
+}
+
+
+
+.box-fo{
+    box-sizing:border-box;
+    float:left;
+    width:30%;
+   
+    
+    box-sizing:border-box;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.box-fo1 img{
+    background-size: cover;
+    width: 100%;
+    
+}
+
+.box-fo2{
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.box-fo3{
+    background-color: rgb(91, 158, 209) ;
+    opacity: 85%;
+    text-align: center;
+}
+
+.box-fo3 div h4{
+    background-color: white;
+    text-align: left;
+}
+
+#creditos {
+    
+    color: rgb(13, 104, 172);
+    
+
+    line-height: normal;
+    font-weight: normal;
+    margin-top: 100px;
+}
+
+.author{
+    color: rgb(13, 104, 172);
+   margin-left: 15px;
+    padding: 0;
+    line-height: normal;
+    font-weight: normal;
+}
