@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Atividade2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+          
+        $(function(){
+
+            var glossario = [{"id":1
+                , "termo":"W3C"
+                ,  "definicao": "World Wide Web Consortium – escritório responsável por desenvolver normas técnicas para a Internet"
+                , "autor": "José Borges"
+                , "dataCriacao": "2015-04-01"}
+
+                ,{"id":2
+                , "termo":"HTML"
+                , "definicao": "HyperText Markup Language – linguagem de marcação utilizada para estruturar páginas web"
+                , "autor": "Pedro Silva"
+                , "dataCriacao": "2018-05-12"}
+                
+                ,{"id":3
+                , "termo":"CSS"
+                , "definicao": "Cascade Style Sheet – Folhas de estilo em cascata, utilizada para configurar a visualização das páginas web"
+                , "autor": "Ricardo Souza"
+                , "dataCriacao": "2017-10-11"}];
+
+                glossario.forEach(myFunction);
+                function myFunction(value) {
+
+                }
+               
+                
+
+                $("#termo").on("click","li",function(){
+                    let termoId = $(this).attr("id");
+
+                    let termoClicado = glossario.filter(function(def){
+                        return def.id == termoId;
+                    })
+                    console.log(termoClicado);
+                    let obj_li = $("<li>").text(termoClicado[0].definicao);
+                    $("#definicao").append(obj_li);
+
+
+                });
+
+
+
+        });
+        
+    </script>
+
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-9">
+            <h2>Dicionario Online</h2>
+            <hr>
+        </div>
+        <div class="col-4">
+            <h4>Termos Cadastrados</h4>
+            <ul id="termo">
+                <li id="1"><a href="#">W3C</a></li>
+                <li id="2"><a href="#">HTML</a></li>
+                <li id="3"><a href="#">CSS</a></li>
+            </ul> 
+        </div>
+        
+        <div class="col-6">
+            <h4>Definição</h4>
+            <ul id="definicao">
+
+            </ul>
+        </div>
+    
+
+
+</body>
+</html>
