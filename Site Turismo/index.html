@@ -4,76 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <link rel="stylesheet" href="./css/estilo-antiga.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
+    
+    <script type="text/javascript" async="" src="./css/script.js"></script>
     <title>Fundamentos Web - Lab 04 - Responsividade</title>
 </head>
 <body>
     <header class="container">
-        <h1>Turismo em Nova Friburgo</h1>
-        <nav>
+        <h1>Turismo em Nova Friburgo - Lumiar</h1>
+        <nav id="nav-desktop">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Circuitos</a></li>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Atrações</a></li>
-                <li><a href="#">Parques</a></li>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./circuitos.html">Circuitos</a></li>
+                <li><a href="./novidades.html">Novidades</a></li>
+                <li><a href="./atracoes.html">Atrações</a></li>
+                <li><a href="./pousadas.html">Pousadas</a></li>
             </ul>
         </nav>
+         <!-- Nav Mobile -->
+         
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Início</a>
+            <a href="#">Circuitos</a>
+            <a href="#">Novidades</a>
+            <a href="#">Atrações</a>
+            <a href="#">Parques</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+
     </header>
     <main class="container">
-        <div class="carousel">
+    <div class="carousel">
+        <ul>
+            <li>
+                <figure>
+                    <img src="./img/banner1.jpg">
+                    <figcaption>Nova Friburgo Country Club</figcaption>
+                </figure>
+            </li>
+            <!--
+            <li>
+                <figure>
+                    <img src="./img/banner2.jpg">
+                    <figcaption>Praça Getúlio Vargas</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="./img/banner3.jpg">
+                    <figcaption>Vargem Alta</figcaption>
+                </figure>
+            </li>
+        -->
+        </ul>
+        <div class="carousel-controller">
+            <a href="#"><i class="icon-arrow-left"></i></a>
+            <a href="#"><i></i></a>
+        </div>
+        <div class="carousel-bullets">
             <ul>
-                <li>
-                    <figure>
-                        <img src="./img/banner1.jpg">
-                        <figcaption>Nova Friburgo Country Club</figcaption>
-                    </figure>
-                </li>
-                <!--
-                <li>
-                    <figure>
-                        <img src="./img/banner2.jpg">
-                        <figcaption>Praça Getúlio Vargas</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="./img/banner3.jpg">
-                        <figcaption>Vargem Alta</figcaption>
-                    </figure>
-                </li>
-            -->
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
             </ul>
-            <div class="carousel-controller">
-                <a href="#"><i class="icon-arrow-left"></i></a>
-                <a href="#"><i></i></a>
-            </div>
-            <div class="carousel-bullets">
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-            </div>
+        </div>
+    </div>
+    <!-- Corussel Mobile -->
+    <div class="container">
+    <div class="slideshow-container" id="slideshow">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="./img/Cachoeira-Toca-da-Onça-em-Lumiar.jpg" style="width:100%">
+          <div class="text">Cachoeira Toca da Onça em Lumiar</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="./img/Pousada-Solar-do-Passaredo.jpg" style="width:100%">
+          <div class="text">Pousada Solar do Passaredo</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="./img/Poço-Feio.jpg" style="width:100%">
+          <div class="text">Poço Feio Alta</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
         <div class="row">
             <div class="box">
-                <img src="./img/amparo.jpg" class="box-img">
-                <h3>Amparo</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
+                <img src="./img/circuito-gipe.JPG" class="box-img">
+                <h3>Circuito de Gipe</h3>
+                <p>Sobre Aventura Tour Passeios de Jeep
+                    Somos uma empresa que estamos há mais de 20 anos no mercado, buscando sempre oferecer um serviço com conforto, qualidade e segurança para conhecer os principais pontos turísticos da região. Promovendo experiencias divertidas e criando memorias incríveis.</p>
                 <button>Veja mais</button>
             </div>
             <div class="box">
-                <img src="./img/centro.jpg" class="box-img">
-                <h3>Centro</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
-                <button>Veja mais</button>
+                <img src="./img/atracao2.jpg" class="box-img img-fluid">
+                <h3>Cachoeira de São José</h3>
+                <p>A Pedra Riscada é mais um grande ponto turístico natural de Lumiar. O nome se dá por conta das ranhuras causas por milhões de anos de intemperismo e erosão naquela montanha. Para chegar a pedra, você segue uma trilha não sinalizada, exceto por algumas fitinhas amarelas. O caminho é bem aberto e em mais ou menos uma hora você chegará ao cume da Pedra Riscada. Lá, você pode apreciar uma vista encantadora de Lumiar e região.</p>
+                
             </div>
             <div class="box">
-                <img src="./img/conego.jpg" class="box-img">
-                <h3>Conego</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
+                <img src="./img/circuito-Pedra-Riscada.jpg" class="box-img">
+                <h3>Pedra Riscada</h3>
+                <p>A Pedra Riscada é mais um grande ponto turístico natural de Lumiar. O nome se dá por conta das ranhuras causas por milhões de anos de intemperismo e erosão naquela montanha. Para chegar a pedra, você segue uma trilha não sinalizada, exceto por algumas fitinhas amarelas. O caminho é bem aberto e em mais ou menos uma hora você chegará ao cume da Pedra Riscada. Lá, você pode apreciar uma vista encantadora de Lumiar e região.</p>
                 <button>Veja mais</button>
             </div>
             <div class="box" id="box-tablet">
@@ -85,26 +136,40 @@
         </div>
         <div class="row">
             <div class="box-2">
-                <h3>Lorem Ipsum</h3>
+                <h3>O Que Fazer em Lumiar: Cachoeiras, Onde Comer, Roteiros e Pousadas!</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis neque. Maecenas erat ipsum, auctor eu viverra id, dignissim eget nibh. Quisque rutrum erat ipsum, vitae semper arcu pellentesque quis. Morbi suscipit commodo elit nec tincidunt. Donec nunc lectus, finibus ac congue in, congue non ex. Sed at nulla eget quam auctor imperdiet. 
+                    Se está procurando aproveitar alguns dias com muita paz e tranquilidade, Lumiar é o lugar perfeito para você. Nunca ouviu falar deste charmoso e encantador lugar? Então esse post é para você, pois nele vamos explicar tudo que você precisa saber sobre este pedacinho de paraíso no interior do Rio de Janeiro.
+
+
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis neque. Maecenas erat ipsum, auctor eu viverra id, dignissim eget nibh. Quisque rutrum erat ipsum, vitae semper arcu pellentesque quis. Morbi suscipit commodo elit nec tincidunt. Donec nunc lectus, finibus ac congue in, congue non ex. Sed at nulla eget quam auctor imperdiet. 
+                    Bom, Lumiar é um distrito localizado em Nova Friburgo no interior do estado do Rio de Janeiro e é conhecido por seus belíssimos pontos turísticos e diversas opções de passeio, com destaque para as paisagens naturais. É muito comum que a cidade receba moradores do estado carioca, principalmente os que moram na região.
+                </p>
+                <p>
+                    Porém, cada vez mais, Lumiar também recebe visitantes de todo o Brasil, que frequentam o local para ir aproveitar os pontos turísticos, as lindas paisagens e diversos atrativos que a cidade oferece, principalmente por conta dos passeios mais próximos da natureza. Se você visitar Lumiar, com certeza não ficará sem fazer nada, são muitas opções para você aproveitar ao máximo a sua viagem.
                 </p>
             </div>
             <div class="box depoimento">
-                <img src="./img/lumiar.jpg">
-                <h4>Ana Maria Antunes, RJ</h4>
+                <div>
+                    <img src="./img/Lago-em-Lumiar-720x250.jpg" width="100%" height="100%">
+                </div>
+                <h4>Lagoa de Lumiar, RJ</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper feugiat porta. Sed cursus odio justo. 
+                    Se está procurando aproveitar alguns dias com muita paz e tranquilidade, Lumiar é o lugar perfeito para você.                
+                </p>
+                <p>
+                    O lago de Lumiar é a principal referência do centro. Ao redor dele, muitos restaurantes, com pegadas diferentes. Cerveja, vinho, fondue, carne, massa, vegetariano e muito mai
                 </p>
             </div>
         </div>
+    </div>
+
+    
+
     </main>
-    <footer class="container">
+    <footer class="container" id="footer-config">
         <div class="row">
-            <p>Desenvolvido por Fundamentos da Web 2020.2</p>
+            <p id="footer-p">Desenvolvido por Fundamentos da Web 2020.2</p>
             <div class="media">
                 <ul>
                     <li>

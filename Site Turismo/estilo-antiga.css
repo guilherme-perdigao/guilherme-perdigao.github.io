@@ -268,7 +268,7 @@ footer a {
 
     .depoimento img{
         width: 100%;
-        height: 100%;
+        height: 200px;
         flex-direction: row;
     }
     .depoimento p {
@@ -692,15 +692,13 @@ img {vertical-align: middle;}
     .container {
         width: 1000px;
         margin: 0 auto;
-
-        
         box-sizing: border-box;
     }
     .row {
         width:920px;
         margin: auto;
         box-sizing: border-box;
-        display:wrap;
+        display:flex;
         flex-direction: row;
     }
 
@@ -716,11 +714,10 @@ img {vertical-align: middle;}
 
     .box, .box-2 {
         margin: 10px 15px 5px 5px;
-        display: flex;
+        flex-grow:1;
     }
     .box {
         width:280px;
-        
     }
 
     .box-2 {
@@ -750,14 +747,6 @@ img {vertical-align: middle;}
 
     .box h4 {
         font-size:0.9em;
-    }
-
-    #depoimento-img{
-      width: 30%;
-    }
-    .depoimento img {
-      width: 100%;
-      height: 200px;
     }
 
     .depoimento p {
@@ -909,22 +898,6 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
-/* Galeria Pousadas */
-
-.foto{
-  
-  flex-wrap: wrap;
-
-
-}
-
-/* Novidade */
-.novidade{
-  width: 50%;
-}
-
-
 
 }
 
