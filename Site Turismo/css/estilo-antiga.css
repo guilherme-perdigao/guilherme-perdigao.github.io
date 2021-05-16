@@ -168,6 +168,16 @@ footer a {
         flex-direction: column;
         
     }
+
+    .foto{
+      margin: 5px 5px 5px 5px;
+
+      flex-wrap: wrap;
+
+      width: 85%;
+      height: 90%;
+    }
+
     /* nav mobile*/
         #nav-desktop{
             display: none;
@@ -525,6 +535,15 @@ display: none;
         margin: 10px;
     }
 
+    .foto{
+      margin: 5px 5px 5px 5px;
+
+      flex-wrap: wrap;
+
+      width: 45%;
+      height: 50%;
+    }
+
 
 
     .box-2{
@@ -702,6 +721,28 @@ img {vertical-align: middle;}
         flex-direction: row;
     }
 
+    .foto{
+      margin: 5px 5px 5px 5px;
+
+      flex-wrap: wrap;
+
+      width: 30%;
+      height: 35%;
+    }
+
+    .depoimento-lagoa{
+      width: 100%;
+      height: 45%;
+    }
+
+    .novidade-text{
+      color: dimgrey;
+      margin-left: 3%;
+      text-align: justify;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.3rem;
+    }
+
    
     #MyTopnav {
         display: none;
@@ -718,6 +759,7 @@ img {vertical-align: middle;}
     }
     .box {
         width:280px;
+        height: auto;
     }
 
     .box-2 {
@@ -735,6 +777,7 @@ img {vertical-align: middle;}
     .box-img {
         box-sizing: border-box;
         width:inherit;
+        height: 45%;
     }
 
     .box h3, .box-2 h3, .box h4 {
