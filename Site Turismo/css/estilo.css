@@ -154,12 +154,7 @@ footer a {
 
 /*  ----------------------------     celular    ---------------------                  */
 @media (max-width:767px) { 
-    body {
-        
-    }
-    .container{
-      
-    }
+
     .row {
         width: 100%;
         box-sizing: border-box;
@@ -296,7 +291,10 @@ footer a {
         display: none;
     }
     
-
+    /* Novidade */
+    #novidade{
+      width: 50%;
+    }
 
     * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -531,6 +529,11 @@ display: none;
         width: 65%;
     }
 
+    /* Novidade */
+  .novidade{
+    width: 50%;
+  }
+
     .depoimento{
         width: 33.5%;
         flex-direction: row;
@@ -704,6 +707,9 @@ img {vertical-align: middle;}
         flex-direction: row;
     }
 
+    
+
+
    
     #MyTopnav {
         display: none;
@@ -751,6 +757,15 @@ img {vertical-align: middle;}
     .box h4 {
         font-size:0.9em;
     }
+
+    .foto{
+  
+      flex-wrap: wrap;
+      background-color: lawngreen;
+    
+    
+    }
+    
 
     #depoimento-img{
       width: 30%;
@@ -912,17 +927,6 @@ img {vertical-align: middle;}
 
 /* Galeria Pousadas */
 
-.foto{
-  
-  flex-wrap: wrap;
-
-
-}
-
-/* Novidade */
-.novidade{
-  width: 50%;
-}
 
 
 
