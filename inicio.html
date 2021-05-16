@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    
+    <script type="text/javascript" async="" src="./css/script.js"></script>
+    <title>Fundamentos Web - Lab 04 - Responsividade</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Turismo em Nova Friburgo</h1>
+        <nav id="nav-desktop">
+            <ul>
+                <li><a href="./inicio.html">Início</a></li>
+                <li><a href="./circuitos.html">Circuitos</a></li>
+                <li><a href="./novidades.html">Novidades</a></li>
+                <li><a href="./atracoes.html">Atrações</a></li>
+                <li><a href="./parques.html">Parques</a></li>
+            </ul>
+        </nav>
+         <!-- Nav Mobile -->
+         
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Início</a>
+            <a href="#">Circuitos</a>
+            <a href="#">Novidades</a>
+            <a href="#">Atrações</a>
+            <a href="#">Parques</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </header>
+    <main class="container">
+
+
+        <div class="row">
+            <div class="box">
+                <img src="./img/amparo.jpg" class="box-img">
+                <h3>Amparo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
+                <button>Veja mais</button>
+            </div>
+            <div class="box">
+                <img src="./img/centro.jpg" class="box-img">
+                <h3>Centro</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
+                <button>Veja mais</button>
+            </div>
+            <div class="box">
+                <img src="./img/conego.jpg" class="box-img">
+                <h3>Conego</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
+                <button>Veja mais</button>
+            </div>
+            <div class="box" id="box-tablet">
+                <img src="./img/lumiar.jpg" class="box-img">
+                <h3>Lumiar</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis id...</p>
+                <button>Veja mais</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box-2">
+                <h3>Lorem Ipsum</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis neque. Maecenas erat ipsum, auctor eu viverra id, dignissim eget nibh. Quisque rutrum erat ipsum, vitae semper arcu pellentesque quis. Morbi suscipit commodo elit nec tincidunt. Donec nunc lectus, finibus ac congue in, congue non ex. Sed at nulla eget quam auctor imperdiet. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus enim, luctus nec quam a, aliquam venenatis neque. Maecenas erat ipsum, auctor eu viverra id, dignissim eget nibh. Quisque rutrum erat ipsum, vitae semper arcu pellentesque quis. Morbi suscipit commodo elit nec tincidunt. Donec nunc lectus, finibus ac congue in, congue non ex. Sed at nulla eget quam auctor imperdiet. 
+                </p>
+            </div>
+            <div class="box depoimento">
+                <img src="./img/lumiar.jpg">
+                <h4>Ana Maria Antunes, RJ</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper feugiat porta. Sed cursus odio justo. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    </main>
+    <footer class="container" id="footer-config">
+        <div class="row">
+            <p id="footer-p">Desenvolvido por Fundamentos da Web 2020.2</p>
+            <div class="media">
+                <ul>
+                    <li>
+                        <a href="#"><i>T</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>F</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>I</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>P</i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
