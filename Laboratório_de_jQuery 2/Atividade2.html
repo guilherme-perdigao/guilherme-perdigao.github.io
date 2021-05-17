@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#lerPalavra").click(function(){
+            let palavra = $("#palavra").val();
+            palavra = palavra.toLowerCase();
+            
+            var x = palavra.replace("a", "<b>a</b>").replace("e", "<b>e</b>").replace("i", "<b>i</b>").replace("o", "<b>o</b>").replace("u", "<b>u</b>");
+
+            obj_p = $("<p>").text(palavra1);
+            $("#resultado").append(x);
+
+            })
+            
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="col">
+                <input type="text" id="palavra">
+            </div>
+            <div class="col">
+                <button type="button" id="lerPalavra">lerPalavra</button>                    
+            </div>
+        </form>
+        <div id="res">
+            <p id="resultado"></p>
+        </div>
+    </div>
+
+</body>
+</html>

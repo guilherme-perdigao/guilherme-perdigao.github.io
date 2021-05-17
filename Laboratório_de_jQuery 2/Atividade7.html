@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+
+    <script type="text/javascript">
+        $(function() {
+            //$("#datepicker").text();
+            $("#btnFormatar").click(formatar);
+        });
+
+        function formatar() {
+            var data = $("#datepicker").val();
+            var extenso;
+            
+            data = new Date(data);
+
+            //var day = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][data.getMonth()];
+            var date = data.getDate();
+            var month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"][data.getMonth()];
+            var year = data.getFullYear();
+            
+
+
+            $("#lblDataExtenso").html(`${date} de ${month} de ${year}`);
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <p>Data: <input type="text" id="datepicker"></p>
+        <p><button id="btnFormatar">Formatar</button>
+        <p><label id="lblDataExtenso">???</label></p>
+    </div>
+
+</body>
+</html>
