@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#add_item").click(function(){
+                var servico = "https://rafaelescalfoni.net/receitas.php";
+                //"https://rafaelescalfoni.net/receitas.php";
+                //"https://botanicapp.com.br/receitas_teste.php";
+    
+
+                $.get(servico)
+                    .done(function(data){
+                    var receitasArray = JSON.parse(data);
+                    $.each(receitasArray, function(indice, receita){
+                        $(".cardapio").append($("<h1/>").text(receita.nome));
+                        $(".cardapio").append($("<img/>").attr("src", receita.foto));
+                    });
+                });
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>Receitas</h1>
+    <button id="#add_item">Buscar Receitas</button>
+    <div class="cardapio"></div>
+    
+</body>
+</html>

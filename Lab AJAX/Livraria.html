@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<script type="text/javascript" src="./script.js"></script>-->
+    <title>Atividade 1</title>
+    <script>
+        var acervo = [];
+        $(function(){
+            $("#add_item").click(function(){
+                var titulo = $("#add_item1").val();
+                var descricao = $("#add_item2").val();
+                var genero = $("#add_item3").val();
+                var autor = $("#add_item4").val();
+                
+                
+                //let obj_link = $("<a>").attr("href","#");
+                
+                var obj_i = $("<i>").attr("class","glyphicon glyphicon-trash").attr("id","lixeira");
+                var obj_remov_item = $("<td>").append(obj_i);
+                var obj_tr = $("<tr>");
+                var obj_td_titulo = $("<td>").text(titulo);
+                var obj_td_descricao = $("<td>").text(descricao);
+                var obj_td_genero = $("<td>").text(genero);
+                var obj_td_autor = $("<td>").text(autor);
+                obj_tr.append(obj_td_titulo).append(obj_td_descricao).append(obj_td_genero).append(autor).append(obj_remov_item);  
+                
+                //let obj_livro{"titulo":titulo, "descricao":descricao,"genero":genero,"autor":autor}
+
+                
+                var obj_cadastrado = {"titulo":titulo, "descricao":descricao,"genero":genero,"autor":autor};
+                //console.log(obj_cadastrado);
+
+                acervo.push = obj_cadastrado;
+                
+                $("#table").append(obj_tr);
+
+                $("#add_item1").val("");
+                $("#add_item2").val("");
+                //$("#add_item3").val("");
+                $("#add_item4").val("");
+            
+            })
+
+            $("#table").on("click","#lixeira",function(){
+                let b = $(this).parents("tr");
+                acervo.indexOf(b);
+                $(this).parents("tr").remove();
+                delete acervo[b]; 
+            });
+
+
+
+        });
+        $("#salv_bd").click(function(){
+            $.ajax({
+                    
+                    type: 'POST',
+                    url: 'https://rafaelescalfoni.net/web/livros.php',
+                    data: acervo,
+                    success: function(data){
+                    console.log("Funcionou!!") 
+                    }
+            });
+        });
+    </script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Livros</h1>
+
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input type="search" id="add_item1" placeholder="Titulo"><br>
+                    </div>
+                    <div class="col">
+                        <textarea class="col" id="add_item2" placeholder="Descrição"></textarea>
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-3 col" id="add_item3" aria-label="Default select example" placeholder="Genero">
+                            <option selected>Genero</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Ficção">Ficção</option>
+                            <option value="Técnico">Técnico</option>
+                        </select><br>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="add_item4" placeholder="Autor"><br>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="add_item">Cadastrar</button>                    
+                    </div>
+                </div>
+            </form>
+
+
+        
+        <h1>Catálago</h1>
+
+        <table class="table table-hover" >
+            <thead>
+              <tr>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Genero</th>
+                <th>Autor</th>
+                <th></th>
+
+              </tr>
+            </thead>
+            <tbody id="table">
+                
+
+            </tbody>
+          </table>
+
+    <button type="button" id="salv_bd">SalvarBD</button>
+                       
+      
+
+    </div>
+</body>
+</html>

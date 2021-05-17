@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#buscaEndereco").click(function(){
+                var servico = "https://api.postmon.com.br/v1/cep/";
+                var cep = $("#cep").val();
+
+                var $xhr = $.get(servico+cep);
+                $xhr.done(function(endereco){
+                    $(".endereco-logradouro").text(endereco.logradouro);
+                    $(".endereco-bairro").text(endereco.bairro);
+                    $(".endereco-cidade").text(endereco.cidade);
+                    $(".endereco-estado").text(endereco.estado);
+                });
+                $xhr.fail(function(data){
+                    console.log("Deu xabu");
+                    console.log(data);
+                });
+            })
+
+
+
+            
+        })
+    </script>
+</head>
+<body>
+    <input id="cep" type="text" />
+    <button id="buscaEndereco">Buscar Endereco</button>
+    <div class="endereco">
+        <p class="endereco-logradouro"></p>
+        <p class="endereco-bairro"></p>
+        <p class="endereco-cidade"></p>
+        <p class="endereco-estado"></p>
+    </div>
+
+    <div class="cardapio"></div>
+    
+</body>
+</html>
