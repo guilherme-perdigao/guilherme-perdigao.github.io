@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#btnFormatar").click(calcular);
+        });
+
+        function calcular() {
+            // MM / DD / AAAA
+            var d1 = $("#Data1").val();
+            var d2 = $("#Data2").val();
+            
+            const data1 = new Date(d1);
+            const data2 = new Date(d2);
+            
+            const diff = Math.abs(data1 - data2);
+            const dias = Math.ceil(diff/ (1000 * 60 * 60 * 24));
+            let c = Math.floor(dias/7);
+            
+
+            
+            $("#lblDataExtenso").html(`${c} semanas`);
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <p>Data1: <input type="text" id="Data1"></p>
+        <p>Data2: <input type="text" id="Data2"></p>
+        <p><button id="btnFormatar">Calcular</button>
+        <p><label id="lblDataExtenso">???</label></p>
+    </div>
+
+</body>
+</html>
