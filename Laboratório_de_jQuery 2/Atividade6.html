@@ -11,12 +11,35 @@
     <script type="text/javascript">
         $(function(){
             $("#lerPalavra").click(function(){
-            let idade = $("#palavra").val();
+            
+            
+            let d1 = $("#palavra").val();
+            var mes = d1.slice(3,5);
+            var dia = d1.slice(0,2);
+            var ano = d1.slice(6,10);
+            mes = parseInt(mes);
+            ano = parseInt(ano);
+            dia = parseInt(dia);
 
+            let dias_vividos = dia; 
+            dias_vividos += (mes-1)*30;
+            dias_vividos += ano*365;
+            console.log(mes*30)
+
+
+            //idade_nasc.parseInt();
+            /*
             idade = 2021 - idade;
             
             obj_p = $("<p>").text(idade);
             $("#resultado").append(idade);
+            */
+
+
+            obj_p = $("<p>").text(dias_vividos);
+            $("#resultado").append(obj_p);
+
+
 
             })
             
@@ -31,7 +54,7 @@
                 <input type="text" id="palavra">
             </div>
             <div class="col">
-                <button type="button" id="lerPalavra">lerPalavra</button>                    
+                <button type="button" id="lerPalavra">Calcular_idade</button>                    
             </div>
         </form>
         <div id="res">

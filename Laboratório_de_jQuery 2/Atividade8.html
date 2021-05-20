@@ -17,17 +17,23 @@
         function calcular() {
             // MM / DD / AAAA
             var d1 = $("#Data1").val();
-            var d2 = $("#Data2").val();
+            var d2 = $("#Data2").val();    
             
-            const data1 = new Date(d1);
-            const data2 = new Date(d2);
-            
-            const diff = Math.abs(data1 - data2);
-            const dias = Math.ceil(diff/ (1000 * 60 * 60 * 24));
-            let c = Math.floor(dias/7);
-            
+            var mes = d1.slice(3,5);
+            var dia = d1.slice(0,2);
+            var ano = d1.slice(6,10);
 
-            
+            var mes2 = d2.slice(3,5);
+            var dia2 = d2.slice(0,2);
+            var ano2 = d2.slice(6,10);
+
+            var semanas = (ano2 - ano) * 52;
+            semanas += (mes2 - mes) * 4.3;
+            semanas += (dia2 - dia)/7;
+
+            semanas = parseInt(semanas);
+            console.log(semanas)
+            let c= semanas;
             $("#lblDataExtenso").html(`${c} semanas`);
         }
     </script>

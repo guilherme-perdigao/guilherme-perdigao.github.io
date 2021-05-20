@@ -11,31 +11,27 @@
     <script type="text/javascript">
         $(function(){
             $("#lerPalavra").click(function(){
-            palavra = [];
-            let txt = $("#palavra").val();
-            tabela = [];
-            tabela =  {termo:"palavra", ocorrencia:1};
-            let i = 0;
-            let x = 0;
+            let palavra = $("#palavra").val();
+            palavras = [];
+            palavras = palavra.split(" ");
+            console.log(palavras)
             
-
-            
-
-            palavra.forEach(preenche);
-            function preenche(){
-              tabela.push(palavra)
-              i++
+            ocorrenciaArray = [];
+            let linha;
+            palavras.forEach(prenche); 
+              
+            function prenche(value, index, array){
+                ocorrenciaArray += {termo:palavras[index], ocorrencia:1};
+                
             }
-            $("#resultado").append(obj_p);
-           //let obj_p = $("<tr>").text(tabela[i].ocorrencia);
-            palavra = txt.split(" ");
-            let quantidade=0;
+            console.log(ocorrenciaArray)
+
+
+
+             
+            $("#resultado").append(linha);
             
 
-
-
-            //obj_p = $("<tr>").text(palavra);
-            //$("#resultado").append(palavra);
 
             })
             
@@ -58,21 +54,19 @@
             <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Palavra</th>
                     <th scope="col">Numero de Ocorrencias</th>
                   </tr>
                 </thead>
                 <tbody id="resultado">
-                  <tr>
-                    
 
-                  </tr>
 
                 </tbody>
               </table>
         </div>
     </div>
 
+
+    <p>Santo que é Seu nome</p>
 </body>
 </html>

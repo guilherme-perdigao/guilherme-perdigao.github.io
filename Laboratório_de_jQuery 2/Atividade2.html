@@ -12,11 +12,7 @@
         $(function(){
             $("#lerPalavra").click(function(){
             let palavra = $("#palavra").val();
-            palavra = palavra.toLowerCase();
-            
-            var x = palavra.replace("a", "<b>a</b>").replace("e", "<b>e</b>").replace("i", "<b>i</b>").replace("o", "<b>o</b>").replace("u", "<b>u</b>");
-
-            obj_p = $("<p>").text(palavra1);
+            var x = palavra.replace(/a/gi, "<b>a</b>").replace(/e/gi, "<b>e</b>").replace(/i/gi, "<b>i</b>").replace(/o/gi, "<b>o</b>").replace(/u/gi, "<b>u</b>");
             $("#resultado").append(x);
 
             })
